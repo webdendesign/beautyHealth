@@ -1,0 +1,118 @@
+.promo {
+  background-color: $palette-primary;
+  background-image: url("../img/index-can-mobile@1x.png"), url("../img/index-background-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: 20px 166px, 0 0;
+
+  padding: 27px 20px 22px;
+  margin: 0 auto;
+
+  text-align: center;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/index-can-mobile@2x.png"), url("../img/index-background-mobile@2x.jpg");
+    background-size: 280px auto, 320px auto;
+  }
+}
+
+.promo__headline {
+  @include reset;
+
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 36px;
+
+  color: $quaternary-color;
+
+  margin-bottom: 25px;
+}
+
+.promo__slogan {
+  @include reset;
+
+  line-height: 14px;
+  text-transform: $text-transform-base;
+
+  color: $quaternary-color;
+
+  margin-bottom: 302px;
+}
+
+@media (min-width: $tablet-width) {
+  .promo {
+    padding: 37px 30px 529px 118px;
+
+    background-image: url("../img/index-can-tablet@1x.jpg");
+    background-position: 30px 238px;
+
+    text-align: left;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/index-can-tablet@2x.jpg");
+      background-size: 709px auto;
+    }
+  }
+
+  .promo__headline {
+    font-size: 60px;
+    line-height: 60px;
+
+    color: $primary-color;
+
+    width: 415px;
+
+    margin-bottom: 41px;
+  }
+
+  .promo__slogan {
+    font-size: 20px;
+    line-height: 20px;
+
+    color: $primary-color;
+
+    margin-bottom: 50px;
+  }
+
+  .promo__link {
+    width: 245px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .promo {
+    padding: 54px 0 268px 119px;
+
+    position: relative;
+
+    background-image: none;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: -26px;
+      left: 487px;
+
+      width: 552px;
+      height: 499px;
+
+      background-image: url("../img/index-can-desktop@1x.png");
+      background-repeat: no-repeat;
+
+      z-index: 2;
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/index-can-desktop@2x.png");
+        background-size: 552px auto;
+      }
+    }
+  }
+
+  .promo__headline {
+    margin-bottom: 40px;
+  }
+
+  .promo__slogan {
+    margin-bottom: 55px;
+  }
+}

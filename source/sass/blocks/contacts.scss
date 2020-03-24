@@ -1,0 +1,160 @@
+.contacts {
+  position: relative;
+}
+
+.contacts__wrap {
+  padding: 30px 25px 27px 19px;
+
+  display: flex;
+  justify-content: space-between;
+
+  position: relative;
+  z-index: 2;
+
+  background-color: $palette-primary;
+
+  &--grey {
+    background-color: $palette-tertiary;
+  }
+}
+
+.contacts__text {
+  @include reset;
+
+  font-size: $font-size-secondary;
+  line-height: $line-height-secondary;
+  text-transform: $text-transform-base;
+
+  width: 124px;
+
+  margin-right: 16px;
+}
+
+.contacts__address {
+  @include reset;
+
+  font-family: $font-family-secondary;
+  line-height: $line-height-secondary;
+
+  color: $secondary-color;
+
+  width: 135px;
+}
+
+.contacts iframe {
+  position: relative;
+
+  z-index: 2;
+
+  border: none;
+
+  display: block;
+
+  width: 100%;
+
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contacts__wrapper {
+  position: relative;
+}
+
+.contacts__img-wrapper {
+  @include reset;
+
+  width: 320px;
+  height: 400px;
+
+  position: absolute;
+  top: -400px;
+  left: 0;
+  z-index: 1;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 55px;
+    height: 53px;
+
+    background-image: url("../img/map-pin.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .contacts iframe {
+    width: 100%;
+    height: 400px;
+  }
+
+  .contacts__wrap {
+    padding: 64px 71px 59px;
+  }
+
+  .contacts__text {
+    font-size: 20px;
+    line-height: 25px;
+
+    width: 154px;
+  }
+
+  .contacts__address {
+    font-size: $font-size-secondary;
+
+    width: 155px;
+
+    text-align: right;
+
+    span {
+      display: inline-block;
+
+      padding-top: 19px;
+    }
+  }
+
+  .contacts__map {
+    min-height: 339px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .contacts {
+    position: relative;
+
+    iframe {
+      width: 100%;
+    }
+  }
+
+  .contacts__about-us {
+    position: relative;
+  }
+
+  .contacts__wrap {
+    width: 570px;
+
+    padding: 66px 90px 59px 76px;
+
+    background-color: $palette-primary;
+
+    position: absolute;
+    top: 93px;
+    left: 39px;
+
+    z-index: 10;
+  }
+
+  .contacts__map {
+    min-height: 195px;
+  }
+
+  .contacts__address {
+    text-align: left;
+  }
+}

@@ -1,0 +1,466 @@
+.application-example {
+  background-color: $palette-tertiary;
+
+  padding: 16px 0 29px;
+}
+
+.application-example__title {
+  @include reset;
+
+  font-size: $font-size-headline;
+  font-weight: 400;
+  line-height: $line-height-headline;
+
+  margin-bottom: 23px;
+  padding-left: 20px;
+}
+
+.application-example__description {
+  @include reset;
+
+  font-family: $font-family-secondary;
+
+  color: $secondary-color;
+
+  margin-bottom: 23px;
+}
+
+.application-example__table {
+  margin-bottom: 32px;
+
+  tbody {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    width: 280px;
+
+    margin-left: -2px;
+  }
+}
+
+.application-example__table-row {
+  width: 124px;
+
+  padding: 13px 16px 15px;
+
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  border: 1px solid $palette-outline;
+  border-radius: 3px;
+}
+
+.application-example__table-header {
+  font-family: $font-family-secondary;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 12px;
+  text-transform: lowercase;
+
+  color: $secondary-color;
+  background-color: $palette-tertiary;
+
+  position: absolute;
+  bottom: -17px;
+  left: 18px;
+
+  width: 84px;
+
+  text-align: center;
+}
+
+.application-example__table-data {
+  font-size: 24px;
+  line-height: 24px;
+  text-transform: $text-transform-base;
+}
+
+.application-example__text {
+  @include reset;
+
+  line-height: $line-height-secondary;
+  text-transform: $text-transform-base;
+
+  margin-bottom: 36px;
+
+  text-align: center;
+}
+
+.application-example__cat-image {
+  width: 320px;
+  height: 238px;
+
+  margin-bottom: 24px;
+}
+
+.application-example__comparison-item {
+  &--after {
+    display: none;
+  }
+}
+
+.application-example__before,
+.application-example__after {
+  text-transform: $text-transform-base;
+  font-size: $font-size-secondary;
+  line-height: $line-height-secondary;
+
+  border: none;
+
+  background-color: inherit;
+
+  padding: 0;
+  padding-bottom: 6px;
+
+  border-bottom: 1px solid transparent;
+
+  &:hover {
+    border-bottom: 1px solid rgba(17, 17, 17, 0.4);
+  }
+
+  &:focus,
+  &:active {
+    border: none;
+  }
+}
+
+.application-example__statistic {
+  padding-right: 21px;
+  padding-left: 20px;
+}
+
+.application-example__buttons {
+  padding: 8px 59px 0 64px;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.application-example__bar {
+  padding-top: 2px;
+}
+
+.application-example__lane {
+  width: 84px;
+  height: 14px;
+
+  background-color: $palette-primary;
+
+  border: 1px solid $palette-outline;
+  border-radius: 6px;
+
+  position: relative;
+}
+
+.application-example__toggle {
+  position: absolute;
+  top: 3px;
+  left: 6px;
+
+  width: 35px;
+  height: 6px;
+
+  background-color: $palette-secondary;
+
+  border-radius: 3px;
+
+  z-index: 2;
+}
+
+@media (min-width: $tablet-width) {
+  .application-example {
+    padding: 11px 0 0;
+
+    background-color: $palette-primary;
+  }
+
+  .application-example__title {
+    font-size: 60px;
+
+    margin-bottom: 64px;
+    padding: 0 30px;
+  }
+
+  .application-example__description {
+    font-size: $font-size-secondary;
+    line-height: 24px;
+
+    margin-bottom: 53px;
+    padding-right: 6px;
+
+    width: 100%;
+  }
+
+  .application-example__table {
+    tbody {
+      width: 366px;
+    }
+  }
+
+  .application-example__table-row {
+    width: 162px;
+
+    padding-bottom: 18px;
+  }
+
+  .application-example__table-data {
+    font-size: 30px;
+    line-height: 37px;
+  }
+
+  .application-example__table-header {
+    font-size: $font-size-primary;
+    line-height: 14px;
+
+    width: auto;
+
+    bottom: -7px;
+    left: auto;
+
+    padding-left: 8px;
+    padding-right: 8px;
+
+    background-color: $palette-primary;
+  }
+
+  .application-example__text {
+    font-size: 20px;
+    line-height: $line-height-secondary;
+
+    width: 174px;
+
+    text-align: right;
+
+    padding-top: 13px;
+
+    span {
+      display: inline-block;
+
+      padding-top: 9px;
+    }
+  }
+
+  .application-example__presentation {
+    position: relative;
+
+    padding-top: 223px;
+  }
+
+  .application-example__statistic {
+    padding: 0 30px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .application-example__comparison {
+    width: 100%;
+    min-height: 366px;
+    background-color: $palette-tertiary;
+  }
+
+  .application-example__comparison-item {
+    position: relative;
+
+    &--before {
+      background-color: $palette-tertiary;
+    }
+
+    &--after {
+      background-color: $palette-comparison;
+    }
+  }
+
+  .application-example__comparison-item--before .application-example__cat-image {
+    position: absolute;
+
+    top: -169px;
+    left: 48px;
+
+    width: 690px;
+    height: 517px;
+  }
+
+  .application-example__before,
+  .application-example__after {
+    font-size: 20px;
+
+    border-bottom: 1px dotted rgba(17, 17, 17, 0.23);
+  }
+
+  .application-example__before {
+    &::before {
+      display: none;
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .application-example__buttons {
+    padding: 0 92px 67px;
+
+    background-color: $palette-tertiary;
+  }
+
+  .application-example__bar {
+    padding-top: 9px;
+  }
+
+  .application-example__lane {
+    position: relative;
+
+    width: 428px;
+    height: 6px;
+
+    border-radius: 2.5px;
+
+    background-color: #dcdcdc;
+  }
+
+  .application-example__toggle {
+    position: absolute;
+
+    top: -13px;
+    left: 200px;
+
+    width: 33px;
+    height: 33px;
+
+    border-radius: 50%;
+    border: 1px solid $palette-outline;
+
+    background-color: $palette-primary;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
+
+    &:hover {
+      box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.25);
+
+      cursor: pointer;
+    }
+
+    &:focus,
+    &:active {
+      width: 32px;
+      height: 32px;
+
+      border: 2px solid $palette-secondary;
+
+      box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.3);
+
+      cursor: pointer;
+
+      &::before {
+        top: 10px;
+        left: 11px;
+      }
+    }
+
+    &::before {
+      content: "";
+
+      position: absolute;
+
+      top: 11px;
+      left: 12px;
+
+      width: 9px;
+      height: 8px;
+
+      border-radius: 50%;
+
+      background-color: $palette-secondary;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .application-example {
+    padding-top: 0;
+  }
+
+  .application-example__title {
+    background-color: $palette-primary;
+
+    padding: 0 0 75px 38px;
+    margin-bottom: 0;
+  }
+
+  .application-example__desc {
+    background-color: $palette-tertiary;
+  }
+
+  .application-example__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    width: 100%;
+  }
+
+  .application-example__statistic {
+    padding: 71px 0 38px 37px;
+
+    width: 570px;
+  }
+
+  .application-example__presentation {
+    padding: 368px 0 0;
+
+    width: 730px;
+  }
+
+  .application-example__description {
+    width: 431px;
+
+    padding-right: 0;
+    margin-bottom: 69px;
+  }
+
+  .application-example__table {
+    margin-bottom: 47px;
+  }
+
+  .application-example__table-header {
+    background-color: $palette-tertiary;
+  }
+
+  .application-example__comparison {
+    min-height: auto;
+  }
+
+  .application-example__buttons {
+    padding: 0 41px 67px 119px;
+  }
+
+  .application-example__bar {
+    padding-top: 7px;
+  }
+
+  .application-example__toggle {
+    &::before {
+      width: 8px;
+    }
+  }
+
+  .application-example__comparison-item--before .application-example__cat-image {
+    top: -558px;
+    left: 38px;
+  }
+
+  .application-example__text {
+    width: 327px;
+
+    span {
+      display: inline;
+
+      margin-left: 58px;
+    }
+  }
+}

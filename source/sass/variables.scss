@@ -1,0 +1,50 @@
+// Цвет фона
+$palette-primary: #ffffff;
+$palette-secondary: #68b738;
+$palette-tertiary: #f2f2f2;
+$palette-decoration: #d9d9d9;
+$palette-border: #ededed;
+$palette-outline: #cdcdcd;
+$palette-border-secondary: #cbcbcb;
+$palette-comparison: #eaeaea;
+$palette-svg: #666666;
+
+// Цвет фона для состояний
+$primary-palette-hover: #5eaa2f;
+$secondary-palette-hover: #ebebeb;
+
+// Цвет текста для состояний
+$primary-color-active: rgba(255, 255, 255, 0.3);
+$secondary-color-active: rgba(68, 68, 68, 0.3);
+$tertiary-color-active: rgba(17, 17, 17, 0.3);
+$decoration-color-active: #f2f2f2;
+
+// Цвет текста
+$primary-color: #111111;
+$secondary-color: #444444;
+$tertiary-color: #222222;
+$quaternary-color: #ffffff;
+
+// Шрифты
+$font-family-primary: "Oswald", "Arial", sans-serif;
+$font-family-secondary: "Arial", "Helvetica", sans-serif;
+
+// Размер шрифта
+$font-size-primary: 14px;
+$font-size-secondary: 16px;
+$font-size-headline: 36px;
+
+// Интерлиньяж
+$line-height-primary: 18px;
+$line-height-secondary: 20px;
+$line-height-headline: 60px;
+
+// Регистр текста
+$text-transform-base: uppercase;
+
+// Размер экрана для медиа-выражений
+$tablet-width: 768px;
+$desktop-width: 1300px;
+$mobile-width-only: 767px;
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;

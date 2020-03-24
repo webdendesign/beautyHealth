@@ -1,0 +1,292 @@
+.features {
+  padding: 0 20px 17px;
+  margin: 0 auto;
+}
+
+.features__list {
+  @include list;
+}
+
+.features__item {
+  background-color: $palette-tertiary;
+
+  padding: 30px 34px 22px 20px;
+  margin-bottom: 24px;
+
+  position: relative;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    bottom: 57px;
+    left: 7.5%;
+
+    width: 85%;
+    height: 1px;
+
+    background-color: $palette-decoration;
+  }
+}
+
+.features__title {
+  @include reset;
+
+  font-family: $font-family-primary;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 37px;
+  text-transform: $text-transform-base;
+
+  color: $primary-color;
+
+  margin-bottom: 29px;
+  padding-left: 71px;
+
+  &--slim::before,
+  &--fast::before {
+    content: "";
+
+    position: absolute;
+
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+
+    z-index: 2;
+  }
+
+  &--slim::before {
+    top: 22px;
+    left: 22px;
+
+    width: 50px;
+    height: 50px;
+
+    background-image: url("../img/icon-cat-slim.svg");
+  }
+
+  &--fast::before {
+    top: 35px;
+    left: 13px;
+
+    width: 67px;
+    height: 28px;
+
+    background-image: url("../img/icon-cat-pro.svg");
+  }
+
+  &--slim::after,
+  &--fast::after {
+    content: "";
+
+    position: absolute;
+    top: 24px;
+    left: 22px;
+
+    width: 50px;
+    height: 50px;
+
+    background-color: $palette-secondary;
+
+    border-radius: 50%;
+  }
+}
+
+.features__text {
+  @include reset;
+
+  font-family: $font-family-secondary;
+  font-size: $font-size-primary;
+  line-height: $line-height-primary;
+
+  color: $secondary-color;
+
+  margin-bottom: 42px;
+}
+
+.features__link {
+  font-size: $font-size-secondary;
+  font-weight: 400;
+  line-height: 16px;
+  text-transform: $text-transform-base;
+
+  color: $primary-color;
+
+  position: relative;
+
+  &:focus,
+  &:active {
+    color: $tertiary-color-active;
+  }
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 3px;
+    right: 105px;
+
+    width: 25px;
+    height: 12px;
+
+    background-image: url("../img/icon-right-arrow-long.svg");
+  }
+
+  &:hover::after {
+    right: 94px;
+
+    width: 34px;
+
+    background-image: url("../img/icon-right-arrow-verylong.svg");
+  }
+
+  &:focus::after,
+  &:active::after {
+    opacity: 0.3;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .features {
+    padding: 0 30px 48px;
+  }
+
+  .features__item {
+    padding: 76px 283px 62px 53px;
+    margin-bottom: 30px;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .features__title {
+    padding: 0;
+    margin-bottom: 25px;
+
+    font-size: 36px;
+
+    &--slim::before {
+      top: 80px;
+      left: 475px;
+
+      width: 141px;
+      height: 194px;
+    }
+
+    &--fast::before {
+      top: 134px;
+      left: 412px;
+
+      width: 268px;
+      height: 113px;
+    }
+
+    &--slim::after,
+    &--fast::after {
+      top: 92px;
+      left: 447px;
+
+      width: 200px;
+      height: 200px;
+    }
+  }
+
+  .features__text {
+    font-size: $font-size-secondary;
+    line-height: 24px;
+
+    margin-bottom: 56px;
+  }
+
+  .features__item:nth-child(2) .features__text {
+    width: 340px;
+  }
+
+  .features__link {
+    font-size: 20px;
+    line-height: $line-height-secondary;
+
+    &::after {
+      top: 5px;
+      right: 220px;
+    }
+
+    &:hover::after {
+      top: 5px;
+      right: 206px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .features {
+    padding: 0 40px 73px;
+  }
+
+  .features__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .features__item {
+    padding: 76px 52px 62px 51px;
+    margin-bottom: 0;
+
+    width: 570px;
+  }
+
+  .features__title {
+    padding-left: 161px;
+    margin-bottom: 74px;
+
+    &--slim::before {
+      top: 41px;
+      left: 65px;
+
+      width: 71px;
+      height: 97px;
+    }
+
+    &--fast::before {
+      top: 68px;
+      left: 34px;
+
+      width: 134px;
+      height: 57px;
+    }
+
+    &--slim::after,
+    &--fast::after {
+      top: 47px;
+      left: 52px;
+
+      width: 100px;
+      height: 100px;
+    }
+  }
+
+  .features__item:nth-child(2) .features__text {
+    width: auto;
+  }
+
+  .features__text {
+    width: auto;
+
+    margin-bottom: 31px;
+  }
+
+  .features__link {
+    &::after {
+      right: 312px;
+    }
+
+    &:hover::after {
+      right: 302px;
+    }
+  }
+}
